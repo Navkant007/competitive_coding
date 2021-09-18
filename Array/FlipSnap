@@ -1,0 +1,103 @@
+ FlipSnap
+Problem Statement
+Build an application that allows the user to send messages to their followers with the added feature that message disappears from their followers’ inbox after 30 seconds they’ve seen the message.
+
+Each user will have some followers.
+Message will be a text message.
+
+Functionalities:
+
+Feed shown to the user should be sorted based on post time.
+Messages should disappear from the feed after 30 seconds once the follower has seen the message.
+A User should be able to delete the message and once the message is deleted, it should not be shown to his followers.(A message should have an ID which could be used to delete the message.)
+The User should be able to see the names of the followers who have seen the message.
+Sample Input
+Users List
+U1: Saleem
+U2: Vikas
+U3: Surbhi
+U4: Deepak
+
+User followed by followers’ List
+U1: U2, U3, U4
+U2: U3, U4
+U3: U1, U2, U4
+U4: U2
+
+
+
+
+
+
+
+Use cases:
+
+Enter the user name.
+U1
+
+
+
+Select Option
+1. Post a message
+2. See your feed
+3. See my messages
+4. Delete a message
+5. Exit
+1
+
+Enter Message:
+Hello to my followers
+
+Select Option
+1. Post a message
+2. See your feed
+3. See my messages
+4. Delete a message
+5. Exit
+5
+
+Enter the user name.
+U2
+
+Select Option
+1. Post a message
+2. See your feed
+3. See my messages
+4. Delete a message
+5. Exit
+2
+
+Feed:
+Saleem : Hello to my followers
+
+
+
+
+<after time lapse of 30 seconds>
+
+
+Select Option
+1. Post a message
+2. See your feed
+3. See my messages
+4. Delete a message
+5. Exit
+2
+<Empty Inbox>
+
+Bonus questions:
+Blocked user should not be able to see your message and vice-versa.
+TTL (time to live) for message can be made configurable.
+
+Expectations
+Code should be demo-able (very important), either by using a main driver program or test cases. 
+Create the sample data yourself. You can put it into a file, test case or main driver program itself. 
+Avoid writing monolithic code.
+Code should be readable, modular, testable, extensible with proper naming conventions. It should be easy to add/remove functionality without rewriting entire codebase. 
+Code should handle edge cases properly and fail gracefully.
+Don’t use any database, store all the data in memory.
+Guidelines
+Please discuss the solution with an interviewer
+Input can be read from file or can be hard coded/used.
+Please do not access internet for anything EXCEPT syntax
+You are free to use the language of your choice.
