@@ -29,7 +29,7 @@ int find_pivot(int a[], int start, int end){
     }
     int mid = start + (end- start)/2;
     if(mid<end && a[mid] > a[mid+1]){
-        return mid;
+        return mid+1;
     }
     if(mid>start && a[mid -1 ] > a[mid] ){
         return mid;
